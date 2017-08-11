@@ -6,4 +6,6 @@ A sequence is thus a chain  of nodes linked by sequential relations. The first n
 
 A concept is a collection of nodes linked by conceptual relations. Each node is connected to a set of other nodes nearby in space. The result is a cascade of activity traveling between nodes in a cyclic manner. The configuration of is determined by repeated observations of activity, where the firing patterns of the nodes tend toward a specific arrangement over space, and the distance/angle between them tend toward specific values.
 
+![](https://github.com/CarsonScott/Online-Relationship-Learning/blob/master/img/Patterns.PNG)
+
 Sequences, being a product of time, require just one dimension for an accurate representation of their patterns. However, concepts exist in space and therefore cannot be represented in the same way. Both have an interval, distance and delay, which are equivalent in that they measure the difference between two things. Objects in two-dimensional space are related through measurements of distance and rotation to represent their differences in space.
