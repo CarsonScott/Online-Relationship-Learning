@@ -1,4 +1,4 @@
-# Concepts and Sequences Outline
+# Concepts and Sequences
 
 Conceptual relations are links between components of a spatial pattern (set of stimuli observed at the same time) while sequential relations are links between components of a temporal pattern (set of stimuli that is observed over a period of time). A spatial pattern represents a set of nodes connected by conceptual relations and a temporal pattern by sequential relations. A pattern reflects the connectivity between nodes of a network. The type of association between a given pair of nodes is based on the firing pattern of each node with respect to the other. Conceptual relations are formed when nodes fire simultaneously, while sequential relations are formed when nodes fire consecutively. Both types carry signals that propagate from node to node. A signal passed over a conceptual relation is received almost immediately after being sent, while a sequential relation delays the signal by some arbitrary amount of time.
 
