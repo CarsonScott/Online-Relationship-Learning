@@ -1,6 +1,6 @@
 # Relations
 
-A relation is an object that associates two nodes, allowing communication from a start node to an end node through signals transmitted along a connection that ultimately impact the state of the receiving node with respect to the strength of the signal. There are three main variables dictating the behavior of any given relation: delay, range, and weight.
+A relation is an object that associates two nodes, allowing communication between a start-node and an end-node through signals that impact the state of the receiving node with respect to the strength of the signal. There are three main variables dictating the behavior of any given relation: delay, range, and weight.
 - Delay is the elapsed time which is expected to occur between the first node firing and the second node firing. 
 - Range is the deviation from delay which is considered acceptable in terms of the expectation of elapsed time. 
 - Weight is the magnitude of the signal which is transmitted from the first node to the second when it is firing.
