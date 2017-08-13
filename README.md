@@ -1,3 +1,5 @@
+# Online Relationship-Learning and Prediction
+
 ## Relations
 
 A relation is an object that associates two nodes, allowing communication between a start-node and an end-node through signals that impact the state of the receiving node with respect to the strength of the signal. There are three main variables dictating the behavior of a given relation: delay, range, and weight.
