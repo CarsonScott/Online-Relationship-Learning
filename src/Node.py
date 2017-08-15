@@ -20,3 +20,4 @@ class Node:
 		self.threshold = self.estimator.peak()/10
 		
 		return y
+
