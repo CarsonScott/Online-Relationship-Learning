@@ -41,3 +41,16 @@ class Relation:
 			self.reset()
 
 		return y
+
+
+r = Relation(0, 1)
+
+for i in range(10):
+	x = 0
+	if i == 0:
+		x = r.update(1, 0, i)
+	elif i == 5:
+		x = r.update(0, 1, i)
+	else:
+		x = r.update(0, 0, i)
+	print(x)
