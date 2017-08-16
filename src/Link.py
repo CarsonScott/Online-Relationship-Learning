@@ -7,14 +7,15 @@ class Link:
 	def __init__(self, estimator, rate):
 		self.state = 0
 		self.error = 0
-		self.weight = 0.5
+		self.weight = 1
 		self.duration = 0
 		self.last_fired = 0
 	
 		self.l_rate = rate
 		self.estimator = estimator
 	
-		self.logistic = Logistic(1, 1, 1)
+		self.logistic = Logistic(1, 2, 3)
+		self.logistic.reflect()
 		
 
 	def update(self, s, t):
@@ -29,10 +30,10 @@ class Link:
 				self.state = self.weight
 
 			if s[1] == 1:
-				self.error = abs(self.duration-et)			
-				dw = self.logistic(self.error)-self.logistic.a/2
+				self.error = abs(self.duration-et)
+				dw = self.logistic(self.error)-0.5*self.logistic.a 
 
-				self.weight -= dw * self.l_rate
+				self.weight += dw * self.l_rate
 				self.estimator.plot(t-self.last_fired)
 				self.duration = self.estimator.peak()
 

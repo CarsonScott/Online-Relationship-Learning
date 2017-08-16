@@ -51,12 +51,14 @@ class Predictor:
 
 		for i in range(len(self.nodes)):
 			x = []
+
 			for l in self.input_links[i]:
 				x.append(self.links[l]())
 
 			self.nodes[i].update(x)
 
 		outputs = []
+		
 		for y in self.outputs:
 			outputs.append(self.nodes[y]())
 

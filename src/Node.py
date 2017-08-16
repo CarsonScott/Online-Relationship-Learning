@@ -5,7 +5,7 @@ class Node:
 
 	def __init__(self, estimator=None):
 		self.state = 0
-		self.threshold = 5
+		self.threshold = 0
 		self.estimator = estimator
 	def update(self, s):
 		x = 0
