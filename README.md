@@ -16,25 +16,23 @@ A link connects an initial node to a final node, allowing information to pass be
 
 ### Examples
 
-The following example is a system of 30 nodes, with the first 5 being input nodes whose firing states are set directly by values passed to to the system. The rest of the nodes receive inputs via relations that connect it to the previous 5 nodes that come before it.
+The following example is a system of 30 nodes, with the first 5 being input nodes whose firing states are set directly by values passed to to the system. The rest of the nodes receive inputs via relations that connect it to the previous 5 nodes that come before it. For each training iteration, the system receives a set of inputs which are used to override the states of the input nodes. The sequence of inputs used here are as follows:
 
-For each training iteration, the system receives a set of inputs which are used to override the states of the input nodes. The sequence of inputs used here are as follows:
-
-	00000
-	00000
-	00000
-	00000
-	00000
-	00000
-	00000
-	00000
-	10000
-	11000
-	11100
-	11110
-	11100
-	11000
-	10000
+	1) 00000
+	2) 00000
+	3) 00000
+	4) 00000
+	5) 00000
+	6) 00000
+	7) 00000
+	8) 00000
+	9) 10000
+	10) 11000
+	11) 11100
+	12) 11110
+	13) 11100
+	14) 11000
+	15) 10000
   
 The system recieves one of these sets (in order) at each iteration and uses it to update the nodes and links that make up its network. It is essentially training and functioning simultaneously, making it an example of an online-learning algorithm, or an algorithm that adapts in real-time. After it finishes processing the inputs, a mean prediction error is caluclated from that of every link. Below is a graph depicting this value over 10,000 iterations:
   
