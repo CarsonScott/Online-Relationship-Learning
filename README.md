@@ -35,6 +35,8 @@ For each training iteration, the system receives a set of inputs which are used 
 	11000
 	10000
   
-The system recieves one of these each iteration and uses it to update the nodes and links that make up its network. It is essentially training and functioning simultaneously, making it an example of an online-learning algorithm, or an algorithm that adapts in real-time. After it finishes processing the inputs, a mean prediction error is caluclated from that of every link. Below is a graph depicting this value over 10,000 iterations:
+The system recieves one of these sets (in order) at each iteration and uses it to update the nodes and links that make up its network. It is essentially training and functioning simultaneously, making it an example of an online-learning algorithm, or an algorithm that adapts in real-time. After it finishes processing the inputs, a mean prediction error is caluclated from that of every link. Below is a graph depicting this value over 10,000 iterations:
   
 ![Error](https://github.com/CarsonScott/Online-Relationship-Learning/blob/master/img/Error%20rate.PNG)
+
+As you can see, the error seems to taper off just under 1.5, meaning the a average difference between a predicted number of iterations or time-steps between two nodes firing and the actual number of iterations is less than 2. In other words, the average expectation tends to fall within 1.5 time-steps of the actual value it is measuring. Given that each time-step is a whole number equal to exactly 1 more  that its predecessor, a time-frame of less than 2 steps is relatively negligable as a measure of predictive performance.
