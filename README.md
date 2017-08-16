@@ -1,6 +1,6 @@
 # Online Relationship Learning and Prediction
 
-__Overview__
+__System__
 
 A system is a network of nodes and relations that adapt to local activity in order to maximize the efficiency of the system. Information passes through a set of input nodes and propagates throughout the network, traveling from node-to-node over relations which connect them to one another.
 
