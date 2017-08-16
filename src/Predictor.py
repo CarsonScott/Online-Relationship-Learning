@@ -64,7 +64,7 @@ class Predictor:
 
 		return outputs
 
-	def total_error(self):
+	def error(self):
 		error = 0
 		for i in range(len(self.links)):
 			error += self.links[i].error
