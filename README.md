@@ -1,8 +1,8 @@
 # Online Relationship-Learning and Prediction
 
 The following is an outline for an unsupervised machine-learning algorithm that predicts and adapts to input patterns in real-time.
-
-__Overview__
+***
+### Overview
 
 A system is a network of nodes and links that adapt to local activity in order to maximize the efficiency of the system. Information passes through a set of input nodes and propagates throughout the network, traveling from node-to-node over links which connect them to one another.
 
