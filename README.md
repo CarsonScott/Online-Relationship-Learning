@@ -10,6 +10,8 @@ A system is a network of nodes and links that adapt to local activity in order t
 
 A node receives inputs from various links and produces a single output. When a set of inputs is received, the total sum is compared to a threshold value in order to determine the firing state of the node. Overtime the threshold adapts to fit the typical value of the sum.
 
+![](https://github.com/CarsonScott/Online-Relationship-Learning/blob/master/img/Node.png)
+
 ## Links
 
 A link connects an initial node to a final node, allowing information to pass between them. When the initial node and final node fire in order, the elapsed time between them is compared to a delay value in order to determine the prediction performance of the relation. Overtime the delay value adapts to fit the typical value of the elapsed time.
