@@ -1,3 +1,8 @@
+from decimal import Decimal 
+
+def Dec(x):
+	return Decimal(x)
+
 e = 2.718281828459
 
 class Function:
@@ -24,8 +29,11 @@ class Gaussian(Function):
 class Logistic(Function):
 
 	def __call__(self, x):
-		return self.a / (1+pow(e, -self.c * (x-self.b)))
-
+		try:
+			y = self.a / (1+pow(e, -self.c * (x-self.b)))
+		except OverflowError:
+			y = float('inf')
+		return y
 class Window(Function):
 
 	def __call__(self, x):
