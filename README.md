@@ -1,6 +1,6 @@
 # Online Relationship-Learning and Prediction
 
-The following is an outline for an unsupervised machine-learning algorithm that predicts and adapts to input patterns in real-time.
+The following is an outline for an unsupervised machine-learning algorithm that predicts and adapts to input patterns in real-time. For part one of this project, see [online category learning](https://github.com/CarsonScott/Online-Category-Learning).
 
 ## Overview
 
