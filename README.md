@@ -16,8 +16,8 @@ A link connects an initial node to a final node, allowing information to pass be
 
 ## Examples
 
-The following graph displays the prediction error of a single relation between two nodes as it changes over time. As you can see, it falls dramatically as the system trains itself to make better predictions. The nodes fire every 20 iterations, with 10 steps between each node's activity and that of the other. It is clear that relation competently converges to the spatio-temporal pattern exhibited by its input sequence. 
-  
+The following graph displays the prediction error of a single relation between two nodes as it changes over time. As you can see, it falls dramatically as the system trains itself to make better predictions. Firing occurs every 10 iterations and alternates between the two. The relation between them is responsible for making predictions about when the next firing will occur. Errors reflect the difference between a predicted time that a firing will occur and the observed time that it does occur.
+
 ![Error](https://github.com/CarsonScott/Online-Relationship-Learning/blob/master/img/Error%20rate.PNG)
 
 
