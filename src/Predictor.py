@@ -37,7 +37,6 @@ class Predictor:
 	def update(self, inputs, time):
 		for i in range(len(inputs)):
 			n = self.inputs[i]
-			self.nodes[n].threshold = 0
 			self.nodes[n].state = inputs[i]
 
 		for i in range(len(self.links)):
@@ -68,5 +67,5 @@ class Predictor:
 		error = 0
 		for i in range(len(self.links)):
 			error += self.links[i].error
-		return error/len(self.links)
+		return error
 

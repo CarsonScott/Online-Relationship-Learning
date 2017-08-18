@@ -15,7 +15,12 @@ for line in file:
 			v = 1
 
 		lines[len(lines)-1].append(v)
+file.close()
 
+file = open('log2.txt', 'r')
+errors = []
+for line in file:
+	errors.append(line)
 file.close()
 
 pg.init()
@@ -25,6 +30,8 @@ objects = []
 
 for i in range(len(lines[0])):
 	objects.append([i*22, 300, 20, 20])
+
+font = pg.font.Font('arial.ttf', 24)
 
 done = False
 clock = pg.time.Clock()
@@ -44,9 +51,15 @@ while not done:
 			color = RED
 
 		pg.draw.rect(screen, color, objects[o])
+	error = font.render(errors[i], 1,  WHITE)
+
+	screen.blit(error, (0, 270))
 
 	i += 1
 	if i >= len(lines): done = True
+
+
+
 	pg.display.flip()
 	clock.tick(60)
 

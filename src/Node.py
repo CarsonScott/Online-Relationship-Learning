@@ -16,7 +16,8 @@ class Node:
 		if x > self.threshold: 
 			y = 1
 
-		self.estimator.plot(round(x*10))
+		if x != float('NaN') and x != float('inf'):
+			self.estimator.plot(round(x*10))
 		self.threshold = (self.estimator.peak())/10
 		
 		self.state = y
