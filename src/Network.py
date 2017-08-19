@@ -64,6 +64,7 @@ class Network:
 			if self.lAccel[r] > 0: 
 				da = sigmoid(self.lAccel[r])*self.decay_rate
 				self.lAccel[r] -= da
+			
 			i = self.pairs[r][0]
 			f = self.pairs[r][1]
 
@@ -76,7 +77,6 @@ class Network:
 			tf = self.times[r][1]
 			pt = self.delay[r]
 			dt = tf-ti
-
 
 			if dt < 0: 
 				self.ready[r] = 1
@@ -106,11 +106,11 @@ class Network:
 				self.nDelta[n] = 0
 
 			if self.nAccel[n] > 0:
-				dt = sigmoid(self.nAccel[n])*self.decay_rate
-				self.thresh[n] -= dt
-
-			xs = 0
+				da = sigmoid(self.nAccel[n])*self.decay_rate
+				self.nAccel[n] -= da
+			
 			xt = self.thresh[n]
+			xs = 0
 			
 			for r in range(len(self.inputs[n])):
 				xs += self.links[self.inputs[n][r]]
