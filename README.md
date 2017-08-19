@@ -14,10 +14,12 @@ A node receives inputs from various links and produces a single output. When a s
 
 A link connects an initial node to a final node, allowing information to pass between them. When the initial node and final node fire in order, the elapsed time between them is compared to a delay value in order to determine the prediction performance of the relation. Overtime the delay value adapts to fit the typical value of the elapsed time. When the initial node fires and the elapsed time is equal to the delay value, a weighted output is sent to the final node as its input. Overtime the weight value adapts to to fit the typical value of the prediction performance.
 
-## Examples
+## Examples 
 
 The following graph displays the prediction error of a single relation between two nodes as it changes over time. As you can see, it falls dramatically as the system trains itself to make better predictions. Firing occurs every 10 iterations and alternates between the two. The relation between them is responsible for making predictions about when the next firing will occur. Errors reflect the difference between a predicted time that a firing will occur and the observed time that it does occur.
 
-![Error](https://github.com/CarsonScott/Online-Relationship-Learning/blob/master/img/Error%20rate.PNG)
+![Prediction Error](https://github.com/CarsonScott/Online-Relationship-Learning/blob/master/img/Prediction%20Error.PNG)
 
+In this second graph, a sequence of three nodes are linked in order. The first two receive the network's inputs and the third produces its output. The sequence of input patterns consists of one pattern of all 0s, one where the first node receives a 1 and the second receives a 0, and finally a pattern where the first receives a 0 and the second a 1. This sequence is passed in a loop to the network while each node is being trained. Thresholds are adapted to fit a node's total input value, referred to as its estimation, and the estimation errors reflect the difference between an estimated input value and the actual value that is received. 
 
+![Estimation Error](https://github.com/CarsonScott/Online-Relationship-Learning/blob/master/img/Estimation%20Error.PNG)
